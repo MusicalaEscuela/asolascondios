@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2a0f5c" />
+  <title>A solas con Dios · Piano | Musicala</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <img class="logo" src="assets/logo-musicala.png" alt="Musicala" />
+      <span class="tag">Repertorio · Piano</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Introducción · 2 compases · 4/4</p>
+      <h1>A solas con <span class="grad-text">Dios</span></h1>
+      <p class="lead">Practica la intro como se toca de verdad: por <strong>frases</strong>, con ritmo, en bucle y a tu velocidad. Primero escucha, luego toca con el modo espera y al final súbele al tempo.</p>
+      <ol class="route">
+        <li><b>1</b> Escucha la frase</li>
+        <li><b>2</b> Tócala en modo espera</li>
+        <li><b>3</b> 3 rondas limpias</li>
+        <li><b>4</b> Une todo y sube el tempo</li>
+      </ol>
+    </section>
+
+    <section class="card score-card">
+      <div class="card-head">
+        <h2>Partitura de referencia</h2>
+        <span class="muted">Mano derecha</span>
+      </div>
+      <img src="assets/partitura_referencia.png" alt="Fragmento de la partitura: dos compases en 4/4" class="score" />
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Elige qué practicar</h2>
+        <span class="muted" id="masteryCount">0 / 4 dominadas</span>
+      </div>
+      <div class="phrases" id="phraseList" role="tablist" aria-label="Frases"></div>
+      <p class="phrase-tip" id="phraseTip"></p>
+    </section>
+
+    <section class="card practice">
+      <div class="controls">
+        <button class="btn primary" id="playButton" type="button"><span id="playSymbol">▶</span> <span id="playLabel">Escuchar frase</span></button>
+        <button class="btn" id="waitButton" type="button">🎹 Tocar (modo espera)</button>
+        <label class="toggle"><input type="checkbox" id="loopToggle" checked /> Repetir</label>
+        <label class="toggle"><input type="checkbox" id="metroToggle" checked /> Metrónomo</label>
+        <label class="toggle"><input type="checkbox" id="countToggle" checked /> Cuenta de 4</label>
+        <div class="tempo">
+          <label for="tempoSlider">Tempo</label>
+          <input type="range" id="tempoSlider" min="35" max="90" step="5" value="55" />
+          <output id="tempoValue">55 BPM</output>
+        </div>
+      </div>
+
+      <div class="message" id="message" role="status" aria-live="polite">
+        <span class="msg-icon">✨</span><p>Elige una frase y presiona «Escuchar frase».</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline" id="timeline" aria-label="Línea de tiempo de las notas">
+          <div class="playhead" id="playhead"></div>
+        </div>
+        <div class="beats" id="beatRuler"></div>
+      </div>
+
+      <div class="seq" id="sequence" aria-label="Notas de la frase en orden"></div>
+
+      <div class="rounds" id="rounds" hidden>
+        <span>Rondas limpias:</span>
+        <span class="stars" id="stars"></span>
+        <span class="muted" id="errorCount"></span>
+      </div>
+    </section>
+
+    <section class="card keyboard-card">
+      <div class="card-head">
+        <h2>Piano</h2>
+        <label class="toggle small"><input type="checkbox" id="showLabels" checked /> Nombres</label>
+        <label class="toggle small"><input type="checkbox" id="showFingers" checked /> Digitación</label>
+      </div>
+      <div class="piano-scroller" id="pianoScroller">
+        <div class="piano" id="piano"></div>
+      </div>
+      <p class="muted kbd-hint">Teclado del computador: A=Do4 · S=Re4 · D=Mi4 · F=Fa4 · G=Sol4 · H=La4 · J=Si4 · K=Do5 · L=Re5</p>
+    </section>
+
+    <section class="card tips">
+      <h2>Claves para que suene bonito</h2>
+      <ul>
+        <li><b>Re4 es una voz aparte.</b> Púlsalo y déjalo sonando 2 pulsos mientras la melodía entra encima (pulgar quieto).</li>
+        <li><b>Las ligaduras no se repiten.</b> La4, Sol4 y Mi4 aparecen dos veces en la partitura pero se tocan una sola vez y se sostienen.</li>
+        <li><b>Las semicorcheas van parejas.</b> Mi–Fa–Sol–Do es una subida en escalera: cuenta «1-e-y-a» con el metrónomo.</li>
+        <li><b>Respira al final.</b> Después de Mi4 hay dos pulsos de silencio; no los recortes.</li>
+        <li><b>Digitación sugerida:</b> Re 1 · Mi 2 · Fa 3 · Sol 4 · Do 5 · La 4 · Fa 2 · Sol 3 · Re 1 · Mi 2.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <img src="assets/logo-musicala.png" alt="" class="footer-logo" />
+    <p>Material didáctico de Musicala. Audio sintetizado en el navegador; no es la grabación original.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

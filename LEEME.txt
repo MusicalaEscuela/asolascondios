@@ -1,0 +1,36 @@
+MUSICALA · A SOLAS CON DIOS · INTRO PARA PIANO
+==============================================
+
+CÓMO ABRIR
+Abre index.html en Chrome, Edge, Safari o Firefox. No necesita instalación.
+También puede subirse a GitHub Pages, Firebase Hosting o cualquier hosting estático.
+
+CÓMO SE PRACTICA (por frases, no nota por nota)
+- Frase A · La subida: Re4 sostenido + Mi-Fa-Sol-Do.
+- Frase B · El suspiro: La (ligada) · Fa · Sol (ligada).
+- Frase C · La llegada: Re · Mi largo que cruza el compás.
+- Intro completa: las tres frases unidas.
+
+Para cada frase:
+1. «Escuchar frase»: suena en bucle, con cuenta de 4 y metrónomo opcionales.
+   La línea de tiempo muestra el ritmo real y una línea rosada sigue el pulso.
+2. «Tocar (modo espera)»: la tecla naranja indica la siguiente nota y su dedo.
+   La frase se repite; con 3 rondas limpias (sin errores) queda dominada
+   y se guarda el tempo alcanzado en este navegador.
+3. Sube el tempo de 5 en 5 BPM hasta llegar a la velocidad de la canción.
+
+ATAJOS
+Teclado: A=Do4, S=Re4, D=Mi4, F=Fa4, G=Sol4, H=La4, J=Si4, K=Do5, L=Re5.
+Barra espaciadora: escuchar / detener.
+
+DIGITACIÓN SUGERIDA (mano derecha)
+Re 1 · Mi 2 · Fa 3 · Sol 4 · Do 5 · La 4 · Fa 2 · Sol 3 · Re 1 · Mi 2.
+
+IDENTIDAD
+Logo y paleta de Musicala (assets/logo-musicala.png, assets/icon.svg).
+
+ARCHIVOS
+index.html, styles.css, app.js, assets/partitura_referencia.png.
+
+Transcripción hecha sobre la imagen aportada. El audio es un sintetizador
+didáctico local, no la grabación original.
